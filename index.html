@@ -1,0 +1,72 @@
+ <!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300i" rel="stylesheet">
+   
+
+    <title>Desarrollo de componentes Vue.js</title>
+  </head>    
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Desarrollo de componentes con Vue JS</h1>               
+    </div>      
+
+    <div id="app">    
+     
+     
+     
+
+    <template id="caja">
+        <form class="form-inline">
+            <label class="sr-only" for="inlineFormInput">Name</label>
+            <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Jane Doe">
+          
+            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+              <div class="input-group-addon">@</div>
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+            </div>
+          
+            <div class="form-check mb-2 mr-sm-2 mb-sm-0">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox"> Remember me
+              </label>
+            </div>
+          
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+    </template>
+
+     <template id="decontribuyente-template">
+       <div>
+        <ul v-for="c in contribuyentes">
+            <li>{{c.name.first}}</li>
+        </ul>
+      </div>
+      </template>
+    </div>  
+   
+   
+  </div>
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/vue.js"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.3.6/vue-resource.js"></script>
+    <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+
+    <script src="js/main.js"></script>    
+  </body>
+</html>

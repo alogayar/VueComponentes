@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    background: #f1f1f1;
+    width: 100%;    
+       
+}
+.logo_title {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    /*border: 2px solid red;*/
+    padding: 20px;
+}
+.logo_title img {
+    margin-right: 1em;
+    width: 120px;    
+}
+
+.logo_title h4 {
+    color: rgba(0,0,0,0.3);
+    font-size:.7em;
+}
+
+.mi_contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:90%;
+    /*border: 4px solid rgb(57, 29, 158);   */
+    margin:auto;
+    
+}
+.icono {
+    font-size: 20px;
+    /*border: 2px solid red;    */
+}
+
+.container_portada {
+    background-image: url('../img/olive.jpg');
+    background-size: 200%;    
+    width: 100%;
+    height: 400px;
+    animation: movimiento 30s infinite linear alternate;
+    -moz-animation: movimiento 30s infinite linear alternate;
+}
+@keyframes movimiento{
+    from{
+        background-position: bottom left;
+    } to {
+        background-position: top right;
+    }
+}
+
+.capa_gradiente {
+    width:100%;
+    height: 100%;
+    position: relative;
+    background: -moz-linear-gradient(left,black,rgb(35, 21, 97));
+    opacity: 0.6;    
+}
+
+.container_detalles {
+    width:100%;
+    position: absolute;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.detalles{
+    width:100%;
+    max-width: 500px;    
+    position: relative;
+    color:white;
+    top:20px;
+    left:20px;
+}
+.detalles h1 {
+    font-size: 40px;
+    font-weight: 100;
+}
+.detalles p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 100;
+}
+.detalles button {
+    padding: 10px 20px;
+    background:none;
+    color: white;
+    font-size: 16px;
+    border-style: none;
+    border: 1px solid white;
+    margin-top: 20px;  
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+.detalles button:hover {
+    background: white;
+    color: black;
+
+}
