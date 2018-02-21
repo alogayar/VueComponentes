@@ -6,11 +6,12 @@ Vue.component('caja-contribuyente',{
 
 
 
-var urlAPI = 'https://randomuser.me/api/?results=12'
+var urlAPI = 'https://randomuser.me/api/?results=5&inc=id,name,email,picture'
 new Vue({
     el: '#app',
     data: {
       contribuyentes:{},
+      mostrar:false,
     },
     created: function(){
       this.consultarContribuyente();
@@ -18,22 +19,26 @@ new Vue({
     methods: {
       consultarContribuyente: function(){
        // GET /someUrl
-       this.$http.get(urlAPI2)
+       this.$http.get(urlAPI)
         .then(function(respuesta) {
             // success
           this.contribuyentes = respuesta.data.results;
         }, 
         response => {
-          // error
-          alert("error");
+          // error         
         }); 
-    }
+    },
+      
     },
     /* locales a la instancia */
     components:{
-      'contribuyente': {
+      'lista-contribuyentes': {
         template: '#contribuyente-template',
         props:['']
+      },
+      'caja-contribuyente': {
+        template: '#caja-contribuyente-template',
+        props:['contribuyente']
       }
     },
 

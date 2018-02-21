@@ -21,44 +21,52 @@
       <h1 class="display-4">Desarrollo de componentes con Vue JS</h1>               
     </div>      
 
-    <div id="app">    
-     
-     
-     
-
-    <template id="caja">
-        <form class="form-inline">
-            <label class="sr-only" for="inlineFormInput">Name</label>
-            <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Jane Doe">
-          
-            <label class="sr-only" for="inlineFormInputGroup">Username</label>
-            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-              <div class="input-group-addon">@</div>
-              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
-            </div>
-          
-            <div class="form-check mb-2 mr-sm-2 mb-sm-0">
-              <label class="form-check-label">
-                <input class="form-check-input" type="checkbox"> Remember me
-              </label>
-            </div>
-          
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-
+    <div id="app">           
+        <div class="alert alert-primary" role="alert">
+            Componente: <strong> <code>&lt;lista-contribuyentes&gt;</code></strong>
+          </div>
+   
+    <template id="decontribuyente-template">
+        <div class="container">
+            <table class="table">
+              <caption>Consulta de Contribuyentes</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Ccontrib</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellidos</th>
+                  <th scope="col">Email</th>                  
+                  <th scope="col">Foto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="contrib,index in contribuyentes">
+                  <th scope="row">{{index}}</th>
+                  <td>{{contrib.name.first}}</td>
+                  <td>{{contrib.name.last}}</td>
+                  <td>{{contrib.email}}</td>                  
+                  <td><img :src="contrib.picture.thumbnail" alt=""></td>                  
+                  <td><i class="fa fa-address-card-o"></i> </td>
+                </tr>
+                <tr>        
+              </tbody>
+            </table>
+           </div>    
     </template>
 
-     <template id="decontribuyente-template">
-       <div>
-        <ul v-for="c in contribuyentes">
-            <li>{{c.name.first}}</li>
-        </ul>
-      </div>
-      </template>
-    </div>  
+    
+    
+
+    
+  
+  
+  
+  </div>  
    
    
-  </div>
+  
+
+
    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
